@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CodeQuest</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <!-- Logo/Marca -->
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-code"></i>
+                <span>CodeLearn</span>
+            </a>
+
+            <!-- Enlaces de navegación -->
+            <div class="navbar-nav me-auto">
+                <a class="nav-link active" href="#">Inicio</a>
+                <a class="nav-link" href="#">Cursos</a>
+                <a class="nav-link" href="#">Recursos</a>
+            </div>
+
+            <!-- Menú de usuario -->
+            <div class="user-menu">
+                <button class="user-menu-btn" type="button" data-bs-toggle="dropdown">
+                    <img src="ruta-a-tu-avatar.jpg" alt="Usuario" class="user-avatar">
+                    <span class="user-name">Tu Nombre</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                    <li><a class="dropdown-item" href="#">Configuración</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <!-- Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <div class="user-info">
+                    <img src="../img/default-avatar.png" alt="Perfil" class="sidebar-avatar">
+                    <div>
+                        <h4>Juan Pérez</h4>
+                        <span class="user-level">Nivel 3</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-stats">
+                <div class="stat-item">
+                    <i class="fas fa-fire"></i>
+                    <span>5 días de racha</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-star"></i>
+                    <span>250 puntos</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="#overview" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    <span>Vista General</span>
+                </a>
+                <a href="#courses" class="nav-item">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Mis Cursos</span>
+                </a>
+                <a href="#achievements" class="nav-item">
+                    <i class="fas fa-trophy"></i>
+                    <span>Logros</span>
+                </a>
+                <a href="#progress" class="nav-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Progreso</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="dashboard-main">
+            <!-- Vista General -->
+            <section class="dashboard-overview">
+                <div class="overview-header">
+                    <h1>¡Bienvenido de vuelta, Juan!</h1>
+                    <p>Continúa tu viaje de aprendizaje</p>
+                </div>
+
+                <div class="quick-stats">
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>2.5 horas</h3>
+                            <p>Tiempo de estudio hoy</p>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>15</h3>
+                            <p>Ejercicios completados</p>
+                        </div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h3>2</h3>
+                            <p>Certificados ganados</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Curso Actual -->
+                <div class="current-course">
+                    <div class="course-header">
+                        <h2>Continúa aprendiendo</h2>
+                        <a href="#" class="btn-resume">Continuar <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="course-progress">
+                        <div class="course-info">
+                            <h3>HTML Básico</h3>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 75%"></div>
+                            </div>
+                            <span>75% completado</span>
+                        </div>
+                        <div class="next-lesson">
+                            <h4>Próxima lección:</h4>
+                            <p>Formularios HTML</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actividad Reciente -->
+                <div class="recent-activity">
+                    <h2>Actividad Reciente</h2>
+                    <div class="activity-feed">
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Completaste "Estructura HTML"</h4>
+                                <p>Hace 2 horas</p>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="activity-details">
+                                <h4>Nuevo logro: "Explorador CSS"</h4>
+                                <p>Hace 1 día</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="footer-component"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/dashboard.js"></script>
+    <script src="../js/components.js"></script>
+</body>
+</html>

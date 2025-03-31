@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeQuest - Contacto</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts para tipografía personalizada -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="components/css/header.css">
+    <link rel="stylesheet" href="components/css/footer.css">
+</head>
+<body>
+    <!-- Header Component -->
+    <div id="header-component"></div>
+
+    <!-- Main Section -->
+    <section class="cq-main-section">
+        <div class="cq-container">
+            <div class="cq-main-header">
+                <h1 class="cq-section-title" data-aos="fade-up">Contáctanos</h1>
+                <p class="cq-main-subtitle" data-aos="fade-up" data-aos-delay="100">
+                    ¿Tienes alguna pregunta? Estamos aquí para ayudarte
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="cq-contact-section">
+        <div class="cq-container">
+            <div class="cq-contact-grid">
+                <!-- Contact Info -->
+                <div class="cq-contact-info" data-aos="fade-right">
+                    <div class="cq-info-card">
+                        <h2 class="cq-info-title">Información de Contacto</h2>
+                        <div class="cq-info-items">
+                            <div class="cq-info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="cq-info-content">
+                                    <h3>Ubicación</h3>
+                                    <p>Av. Principal 123, Ciudad de Panama</p>
+                                </div>
+                            </div>
+                            <div class="cq-info-item">
+                                <i class="fas fa-envelope"></i>
+                                <div class="cq-info-content">
+                                    <h3>Email</h3>
+                                    <p>contacto@codequest.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cq-social-links">
+                        <h3>Síguenos en redes sociales</h3>
+                        <div class="cq-social-icons">
+                            <a href="#" class="cq-social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="cq-social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="cq-social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="cq-social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="cq-social-icon"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="cq-contact-form" data-aos="fade-left">
+                    <div class="cq-form-card">
+                        <h2 class="cq-form-title">Envíanos un mensaje</h2>
+                        <form class="cq-form">
+                            <div class="cq-form-group">
+                                <label for="name">Nombre completo</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="cq-form-group">
+                                <label for="email">Correo electrónico</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="cq-form-group">
+                                <label for="subject">Asunto</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="cq-form-group">
+                                <label for="message">Mensaje</label>
+                                <textarea id="message" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="cq-submit-btn">
+                                <span>Enviar mensaje</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Component -->
+    <div id="footer-component"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html> 

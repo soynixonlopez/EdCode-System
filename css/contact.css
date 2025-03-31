@@ -1,0 +1,413 @@
+/* Main Section Styles */
+.cq-main-section {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, #0a192f 0%, #112240 100%);
+    position: relative;
+    overflow: hidden;
+    margin-top: 80px;
+}
+
+.cq-main-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(100, 255, 218, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(0, 184, 148, 0.15) 0%, transparent 50%);
+    opacity: 0.05;
+    pointer-events: none;
+}
+
+.cq-main-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    padding: 0 2rem;
+}
+
+.cq-section-title {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+    color: #fff;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(135deg, #64ffda 0%, #00b8ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.cq-main-subtitle {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Contact Section Styles */
+.cq-contact-section {
+    padding: 100px 0;
+    background: #0a192f;
+    position: relative;
+}
+
+.cq-contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 0 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Contact Info Styles */
+.cq-contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 100%;
+}
+
+.cq-info-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 3rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cq-info-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 3rem;
+    background: linear-gradient(135deg, #64ffda 0%, #00b8ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    text-align: center;
+}
+
+.cq-info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.cq-info-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.cq-info-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(135deg, #64ffda 0%, #00b8ff 100%);
+    border-radius: 12px 0 0 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.cq-info-item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(10px);
+}
+
+.cq-info-item:hover::before {
+    opacity: 1;
+}
+
+.cq-info-item i {
+    font-size: 2rem;
+    color: #64ffda;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(100, 255, 218, 0.1);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.cq-info-item:hover i {
+    background: linear-gradient(135deg, #64ffda 0%, #00b8ff 100%);
+    color: #0a192f;
+    transform: scale(1.1);
+}
+
+.cq-info-content {
+    flex: 1;
+}
+
+.cq-info-content h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.cq-info-content p {
+    font-family: 'Poppins', sans-serif;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Social Links Styles */
+.cq-social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    text-align: center;
+}
+
+.cq-social-links h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.cq-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.cq-social-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 1.2rem;
+}
+
+.cq-social-icon:hover {
+    background: linear-gradient(135deg, #64ffda 0%, #00b8ff 100%);
+    transform: translateY(-3px) rotate(8deg);
+    box-shadow: 0 4px 15px rgba(100, 255, 218, 0.2);
+}
+
+/* Contact Form Styles */
+.cq-contact-form {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.cq-form-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #64ffda 0%, #00b8ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.cq-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+}
+
+.cq-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.cq-form-group label {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.cq-form-group input,
+.cq-form-group textarea {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.cq-form-group input:focus,
+.cq-form-group textarea:focus {
+    outline: none;
+    border-color: #64ffda;
+    box-shadow: 0 0 0 3px rgba(100, 255, 218, 0.1);
+}
+
+.cq-form-group textarea {
+    flex: 1;
+    resize: none;
+}
+
+.cq-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #64ffda 0%, #00b8ff 100%);
+    border: none;
+    border-radius: 8px;
+    color: #0a192f;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.cq-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(100, 255, 218, 0.2);
+}
+
+.cq-submit-btn i {
+    transition: transform 0.3s ease;
+}
+
+.cq-submit-btn:hover i {
+    transform: translateX(3px);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .cq-contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .cq-info-card {
+        padding: 2.5rem;
+    }
+
+    .cq-info-item {
+        padding: 1.5rem;
+    }
+
+    .cq-info-item i {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .cq-main-section {
+        padding: 100px 0 60px;
+        margin-top: 60px;
+    }
+
+    .cq-section-title {
+        font-size: 2.5rem;
+    }
+
+    .cq-main-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .cq-contact-section {
+        padding: 60px 0;
+    }
+
+    .cq-contact-grid {
+        padding: 0 1rem;
+    }
+
+    .cq-info-card {
+        padding: 2rem;
+    }
+
+    .cq-info-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .cq-info-item {
+        padding: 1.2rem;
+        gap: 1.5rem;
+    }
+
+    .cq-info-item i {
+        width: 45px;
+        height: 45px;
+        font-size: 1.3rem;
+    }
+
+    .cq-info-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .cq-info-content p {
+        font-size: 1rem;
+    }
+
+    .cq-social-links {
+        padding: 2rem;
+    }
+
+    .cq-social-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.1rem;
+    }
+
+    .cq-map-card {
+        padding: 0 1rem;
+    }
+} 

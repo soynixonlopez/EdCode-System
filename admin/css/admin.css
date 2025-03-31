@@ -1,0 +1,322 @@
+:root {
+    --primary-color: #64ffda;
+    --bg-dark: #0a192f;
+    --bg-light: #112240;
+    --text-primary: #ccd6f6;
+    --text-secondary: #8892b0;
+    --sidebar-width: 250px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: var(--bg-dark);
+    color: var(--text-primary);
+}
+
+.cq-admin-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Styles */
+.cq-admin-sidebar {
+    width: var(--sidebar-width);
+    background: var(--bg-light);
+    padding: 2rem;
+    position: fixed;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.cq-admin-logo {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cq-admin-logo h1 {
+    font-family: 'Righteous', cursive;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.cq-admin-logo p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.cq-admin-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cq-language-btn {
+    background: transparent;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    color: var(--text-primary);
+    padding: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.cq-language-btn i {
+    font-size: 1.2rem;
+}
+
+.cq-language-btn:hover,
+.cq-language-btn.active {
+    background: rgba(100, 255, 218, 0.1);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Main Content Styles */
+.cq-admin-main {
+    flex: 1;
+    margin-left: var(--sidebar-width);
+    padding: 2rem;
+}
+
+.cq-admin-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.cq-add-topic-btn {
+    background: linear-gradient(45deg, #00ff9d, #00e5ff);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    color: #1a1c2a;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cq-add-topic-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 255, 157, 0.3);
+}
+
+.cq-add-topic-btn i {
+    font-size: 1.1rem;
+}
+
+.cq-admin-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    background: var(--bg-light);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+/* Topics Panel Styles */
+.cq-topics-panel {
+    background: #1e2235;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    height: 100%;
+}
+
+.cq-topics-panel h3 {
+    color: #fff;
+    padding: 1.5rem;
+    margin: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.cq-topics-list {
+    padding: 1rem;
+}
+
+.cq-topic {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.8rem;
+    background: #2a2d3e;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.cq-topic:hover {
+    transform: translateX(5px);
+    background: #3a3f55;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cq-topic.active {
+    background: #4a5069;
+    border-left: 4px solid #00ff9d;
+}
+
+.cq-topic i {
+    margin-right: 12px;
+    color: #00ff9d;
+    font-size: 1.2rem;
+}
+
+/* Editor Panel Styles */
+.cq-editor-panel {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 1.5rem;
+}
+
+.cq-editor-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.cq-topic-title {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-primary);
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    width: 300px;
+}
+
+.cq-topic-title:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.cq-editor-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+.cq-save-btn,
+.cq-preview-btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.cq-save-btn {
+    background: var(--primary-color);
+    color: var(--bg-dark);
+    border: none;
+}
+
+.cq-preview-btn {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.cq-save-btn:hover,
+.cq-preview-btn:hover {
+    transform: translateY(-2px);
+}
+
+/* SimpleMDE Customization */
+.editor-toolbar {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+.editor-toolbar a {
+    color: var(--text-primary) !important;
+}
+
+.editor-toolbar a:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: var(--primary-color) !important;
+}
+
+.CodeMirror {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+    color: var(--text-primary) !important;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.CodeMirror-cursor {
+    border-color: var(--primary-color) !important;
+}
+
+.CodeMirror-selected {
+    background: rgba(100, 255, 218, 0.1) !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    .cq-admin-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .cq-admin-container {
+        flex-direction: column;
+    }
+
+    .cq-admin-sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        padding: 1rem;
+    }
+
+    .cq-admin-main {
+        margin-left: 0;
+    }
+
+    .cq-admin-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cq-language-btn {
+        flex: 0 0 calc(50% - 0.5rem);
+    }
+}
+
+/* Estilo para mensaje de error */
+.cq-error {
+    color: #ff4d4d;
+    padding: 1rem;
+    text-align: center;
+    background: rgba(255, 77, 77, 0.1);
+    border-radius: 8px;
+    margin: 1rem;
+}
+
+/* Animación de carga */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cq-topic {
+    animation: fadeIn 0.3s ease forwards;
+} 

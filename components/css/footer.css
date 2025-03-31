@@ -1,0 +1,309 @@
+/* Footer Component Styles */
+.cq-footer {
+    background: linear-gradient(135deg, rgba(10, 25, 47, 0.95) 0%, rgba(17, 34, 64, 0.95) 100%);
+    padding: 5rem 0 2rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.cq-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at top right, rgba(100, 255, 218, 0.1), transparent 70%);
+    pointer-events: none;
+}
+
+.cq-footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+/* Brand Section */
+.cq-footer-brand {
+    padding-right: 2rem;
+    animation: fadeInUp 0.6s ease;
+}
+
+.cq-footer-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #64ffda;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cq-footer-title:hover {
+    text-shadow: 0 0 30px rgba(100, 255, 218, 0.5);
+    transform: translateY(-2px);
+}
+
+.cq-footer-description {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+/* Social Links */
+.cq-footer-social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.cq-footer-social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.cq-footer-social-link::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: #64ffda;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+    z-index: 0;
+}
+
+.cq-footer-social-link i {
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.cq-footer-social-link:hover::before {
+    width: 150%;
+    height: 150%;
+}
+
+.cq-footer-social-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100, 255, 218, 0.3);
+    border-color: #64ffda;
+}
+
+.cq-footer-social-link:hover i {
+    color: #0a192f;
+}
+
+/* Section Styles */
+.cq-footer-section {
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 10px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease;
+    animation-fill-mode: both;
+}
+
+.cq-footer-section:nth-child(2) { animation-delay: 0.2s; }
+.cq-footer-section:nth-child(3) { animation-delay: 0.4s; }
+.cq-footer-section:nth-child(4) { animation-delay: 0.6s; }
+
+.cq-footer-section:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cq-footer-subtitle {
+    color: #64ffda;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.8rem;
+}
+
+.cq-footer-subtitle::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, #64ffda, transparent);
+    transition: all 0.3s ease;
+}
+
+.cq-footer-section:hover .cq-footer-subtitle::after {
+    width: 50px;
+}
+
+/* Links */
+.cq-footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cq-footer-link {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.cq-footer-link i {
+    color: #64ffda;
+    width: 20px;
+    transition: all 0.3s ease;
+}
+
+.cq-footer-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, rgba(100, 255, 218, 0.1), transparent);
+    transition: all 0.3s ease;
+}
+
+.cq-footer-link:hover {
+    color: #64ffda;
+    transform: translateX(5px);
+}
+
+.cq-footer-link:hover::before {
+    width: 100%;
+}
+
+.cq-footer-link:hover i {
+    transform: scale(1.2);
+}
+
+/* Copyright Section */
+.cq-footer-copyright {
+    text-align: center;
+}
+
+.cq-footer-copyright p {
+    color: #fff;
+    margin: 0;
+    font-size: 1rem;
+}
+
+.cq-highlight {
+    color: #64ffda;
+    font-weight: 600;
+    position: relative;
+    padding: 0 5px;
+}
+
+.cq-highlight::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #64ffda;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: right;
+}
+
+.cq-highlight:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+    .cq-footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .cq-footer-brand {
+        grid-column: 1 / -1;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .cq-footer-social-links {
+        justify-content: center;
+    }
+
+    .cq-footer-section {
+        padding: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .cq-footer {
+        padding: 3rem 0 1.5rem;
+    }
+
+    .cq-footer-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .cq-footer-section {
+        text-align: center;
+    }
+
+    .cq-footer-subtitle::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .cq-footer-link {
+        justify-content: center;
+    }
+} 
